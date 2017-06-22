@@ -16,8 +16,14 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'lib/span-count.js',
+      'lib/absolute-urls-for-internal-links.js',
+      'lib/alert-print-in-code.js',
+      'lib/api-syntax-headlines.js',
       'lib/doctests.js',
-      'tests/test-span-count.js'
+      'tests/test-span-count.js',
+      'tests/test-absolute-urls-for-internal-links.js',
+      'tests/test-alert-print-in-code.js',
+      'tests/test-api-syntax-headlines.js'
     ],
 
 
@@ -29,15 +35,17 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        'lib/*.js': ['browserify'],
-        'tests/test-span-count.js': ['browserify']
+      'lib/*.js': ['browserify'],
+      'tests/*.js' : ['browserify'],
+      'tests/test-span-count.js': ['browserify'],
+      'tests/test-absolute-urls-for-internal-links.js': ['browserify']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['mocha'],
 
 
     // web server port
@@ -59,7 +67,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['Chrome', 'Firefox', 'Nightmare'],
 
 
     // Continuous Integration mode
