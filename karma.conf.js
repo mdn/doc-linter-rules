@@ -15,15 +15,27 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'lib/doctests.js',
       'lib/span-count.js',
       'lib/absolute-urls-for-internal-links.js',
       'lib/alert-print-in-code.js',
       'lib/api-syntax-headlines.js',
-      'lib/doctests.js',
+      'lib/article-length.js',
+      'lib/code-in-pre.js',
+      'lib/data-macro-note.js',
+      'lib/different-locale-links.js',
+      'lib/empty-brackets.js',
+      'lib/empty-elements.js',
       'tests/test-span-count.js',
       'tests/test-absolute-urls-for-internal-links.js',
       'tests/test-alert-print-in-code.js',
-      'tests/test-api-syntax-headlines.js'
+      'tests/test-api-syntax-headlines.js',
+      'tests/test-article-length.js',
+      'tests/test-code-in-pre.js',
+      'tests/test-data-macro-note.js',
+      'tests/test-different-locale-links.js',
+      'tests/test-empty-brackets.js',
+      'tests/test-empty-elements.js'
     ],
 
 
@@ -37,8 +49,6 @@ module.exports = function(config) {
     preprocessors: {
       'lib/*.js': ['browserify'],
       'tests/*.js' : ['browserify'],
-      'tests/test-span-count.js': ['browserify'],
-      'tests/test-absolute-urls-for-internal-links.js': ['browserify']
     },
 
 
