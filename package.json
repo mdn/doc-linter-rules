@@ -1,0 +1,26 @@
+{
+  "name": "doc-linting-logic",
+  "version": "0.0.1",
+  "description": "Contains linting logic used to lint MDN Document",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run"
+  },
+  "author": "",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "karma": "^1.7.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-nightmare": "^0.4.8",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "mocha": "^3.4.2",
+    "nightmare": "^2.10.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {}
+}
