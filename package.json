@@ -4,7 +4,7 @@
   "description": "Contains linting logic used to lint MDN Document",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run"
   },
   "author": "",
   "license": "MPL-2.0",
