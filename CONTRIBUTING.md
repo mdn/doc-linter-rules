@@ -2,11 +2,17 @@
 
 # How to install
 The code is not yet proposed as an npm package, you need to manually clone the repository
-`git clone git@github.com:mdn/doc-linter-rules.git`
+```shell
+git clone git@github.com:mdn/doc-linter-rules.git
+```
 Then you have to install the dependencies using npm
-`npm install --dev`
+```shell
+npm install --dev
+```
 Finally, you can run the tests to ensure that everything is working as expected.
-`npm test`
+```shell
+npm test
+```
 
 Note: The tests are running on NightmareJS an headless Webkit based browser and on Firefox. The tests are expecting firefox to be installed.
 
