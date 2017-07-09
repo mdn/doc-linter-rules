@@ -20,7 +20,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run"
+    "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run",
+    "bundle": "./node_modules/.bin/browserify lib/index.js --s linter -o dist/bundle.js"
   },
   "devDependencies": {
     "browserify": "^14.4.0",
