@@ -4,7 +4,8 @@
   "description": "Contains linting logic used to lint MDN Document",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run"
+    "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run",
+    "bundle": "./node_modules/.bin/browserify lib/index.js --s linter -o dist/bundle.js"
   },
   "author": "",
   "license": "MPL-2.0",
