@@ -2,9 +2,9 @@ const assert = require('assert');
 const ERROR = require('../lib/doctests.js').ERROR;
 const WARNING = require('../lib//doctests.js').WARNING;
 const INFO = require('../lib/doctests.js').INFO;
-const linkCost = require('../lib/link-cost.js').linkCost;
+const linkCost = require('../lib/link-count.js').linkCount;
 
-describe('linkCost', function() {
+describe('linkCount', function() {
   it('Should return 1 error if there is more than 249 links in a page', function(done) {
     const str = Array(250).fill('<a href"#"></a>').join(' ');
     const expected = [
