@@ -44,7 +44,8 @@ module.exports = function(config) {
       'tests/test-unnecessary-macro-params.js',
       'tests/test-url-in-link-title.js',
       'tests/test-wrong-highlighted-line.js',
-      'tests/test-wrong-syntax-class.js'
+      'tests/test-wrong-syntax-class.js',
+      'tests/test-link-count.js'
     ],
 
 
