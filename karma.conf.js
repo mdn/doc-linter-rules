@@ -16,17 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'lib/doctests.js',
-      'lib/span-count.js',
-      'lib/absolute-urls-for-internal-links.js',
-      'lib/alert-print-in-code.js',
-      'lib/api-syntax-headlines.js',
-      'lib/article-length.js',
-      'lib/code-in-pre.js',
-      'lib/data-macro-note.js',
-      'lib/different-locale-links.js',
-      'lib/empty-brackets.js',
-      'lib/empty-elements.js',
-      'tests/test-span-count.js',
+      'lib/*.js',
       'tests/test-absolute-urls-for-internal-links.js',
       'tests/test-alert-print-in-code.js',
       'tests/test-api-syntax-headlines.js',
@@ -35,7 +25,27 @@ module.exports = function(config) {
       'tests/test-data-macro-note.js',
       'tests/test-different-locale-links.js',
       'tests/test-empty-brackets.js',
-      'tests/test-empty-elements.js'
+      'tests/test-empty-elements.js',
+      'tests/test-example-colon-heading.js',
+      'tests/test-font-elements.js',
+      'tests/test-html-comments.js',
+      'tests/test-http-links.js',
+      'tests/test-incorrectly-wrapped-sidebar-macros.js',
+      'tests/test-invalid-macros.js',
+      'tests/test-line-length-in-pre.js',
+      'tests/test-macro-syntax-error.js',
+      'tests/test-name-attribute.js',
+      'tests/test-old-urls.js',
+      //'tests/test-pre-without-class.js' TODO: Fix this method
+      'tests/test-shell-prompts.js',
+      'tests/test-span-count.js',
+      'tests/test-style-attribute.js',
+      'tests/test-summary-heading.js',
+      'tests/test-unnecessary-macro-params.js',
+      'tests/test-url-in-link-title.js',
+      'tests/test-wrong-highlighted-line.js',
+      'tests/test-wrong-syntax-class.js',
+      'tests/test-link-cost.js'
     ],
 
 
