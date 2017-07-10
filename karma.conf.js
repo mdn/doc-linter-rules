@@ -16,17 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'lib/doctests.js',
-      'lib/span-count.js',
-      'lib/absolute-urls-for-internal-links.js',
-      'lib/alert-print-in-code.js',
-      'lib/api-syntax-headlines.js',
-      'lib/article-length.js',
-      'lib/code-in-pre.js',
-      'lib/data-macro-note.js',
-      'lib/different-locale-links.js',
-      'lib/empty-brackets.js',
-      'lib/empty-elements.js',
-      'tests/test-span-count.js',
+      'lib/*.js',
       'tests/test-absolute-urls-for-internal-links.js',
       'tests/test-alert-print-in-code.js',
       'tests/test-api-syntax-headlines.js',
