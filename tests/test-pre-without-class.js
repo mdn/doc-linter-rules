@@ -14,7 +14,8 @@ describe('preWithoutClass', function() {
       '<pre>&lt;tag&gt;</pre>' +
       '<pre id="foo"></pre>' +
       '<pre class="">foo</pre>' +
-      '<pre> \n\r foo</pre>';
+      '<pre> \n\r foo</pre>' + 
+      '<div>Test on non pre</div>';
 
     const expected = [
       {msg: '<pre>foobar;</pre>', type: WARNING},
