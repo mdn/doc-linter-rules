@@ -14,3 +14,12 @@ install:
 
 script:
   - npm test
+  - npm run bundle
+
+deploy:
+  provider: npm
+  email: "TO_BE_DEFINED@TO_BE_DEFINED.com"
+  api_key: "ENCRYPTED_VARIABLE"
+  on:
+    tags: true
+    skip_cleanup: true

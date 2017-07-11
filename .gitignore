@@ -1,0 +1,9 @@
+# Logs
+logs
+*.log
+
+# NPM
+node_modules
+
+# Coverage report
+coverage
