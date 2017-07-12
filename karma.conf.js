@@ -36,7 +36,7 @@ module.exports = function(config) {
       'tests/test-macro-syntax-error.js',
       'tests/test-name-attribute.js',
       'tests/test-old-urls.js',
-      //'tests/test-pre-without-class.js' TODO: Fix this method
+      'tests/test-pre-without-class.js',
       'tests/test-shell-prompts.js',
       'tests/test-span-count.js',
       'tests/test-style-attribute.js',
