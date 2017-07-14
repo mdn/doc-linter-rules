@@ -1,13 +1,27 @@
 {
-  "name": "doc-linting-logic",
+  "name": "mdn-doc-linter-rules",
   "version": "0.0.1",
-  "description": "Contains linting logic used to lint MDN Document",
+  "description": "Rules to lint MDN documents",
+  "author": "Mozilla Developer Network",
+  "homepage": "https://github.com/mdn/doc-linter-rules#readme",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/doc-linter-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdn/doc-linter-rules/issues"
+  },
+  "keywords": [
+    "linting",
+    "rules",
+    "documentation",
+    "mdn"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/karma start --browsers Firefox,Nightmare --single-run"
   },
-  "author": "",
-  "license": "MPL-2.0",
   "devDependencies": {
     "browserify": "^14.4.0",
     "karma": "^1.7.0",
