@@ -7,6 +7,7 @@ describe('differentLocaleLinks', function() {
     const str = '<a href="/en-US/docs/some/page">Page</a>' +
       '<a href="http://developer.mozilla.org/en-US/docs/some/page">Page</a>' +
       '<a href="https://developer.mozilla.org/en-US/docs/some/page">Page</a>' +
+      '<a href="/@api/deki/files/1234567/somefile.png">Page</a>' +
       '<a href="/xx-YY/docs/some/page">Page</a>' +
       '<a href="http://developer.mozilla.org/xx-YY/docs/some/page">Page</a>' +
       '<a href="https://developer.mozilla.org/xx-YY/docs/some/page">Page</a>';
