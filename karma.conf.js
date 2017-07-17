@@ -45,7 +45,8 @@ module.exports = function(config) {
       'tests/test-url-in-link-title.js',
       'tests/test-wrong-highlighted-line.js',
       'tests/test-wrong-syntax-class.js',
-      'tests/test-link-count.js'
+      'tests/test-link-count.js',
+      'tests/test-anchor-exists.js'
     ],
 
 
