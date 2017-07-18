@@ -16,7 +16,8 @@ describe('emptyElements', function() {
       '<input value="test"/>' +
       '<p><span>some text</span></p>' +
       '<p>some text</p>' +
-      '<span><span style="display:block;z-index:9999;">&nbsp;</span></span>';
+      '<span><span style="display:block;z-index:9999;">&nbsp;</span></span>' +
+      '<td></td>';
 
     const expected = [
       {msg: '<p> </p>', type: ERROR},

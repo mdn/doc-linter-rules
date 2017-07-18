@@ -6,24 +6,25 @@ const preWithoutClass = require('../lib/pre-without-class.js').preWithoutClass;
 describe('preWithoutClass', function() {
   it('Should return 3 errors and 4 warnings regarding pre lacking a class', function(done) {
     const str = '<pre class="brush: js"></pre>' +
-           '<pre class="syntaxbox"></pre>' +
-           '<pre>folder/\n  file</pre>' +
-           '<pre>foobar;</pre>' +
-           '<pre>/* comment */\nvar code;</pre>' +
-           '<pre>@rule param {\n  descriptor: value;\n}</pre>' +
-           '<pre>&lt;tag&gt;</pre>' +
-           '<pre id="foo"></pre>' +
-           '<pre class="">foo</pre>' +
-      '<pre> \n\r foo</pre>';
+      '<pre class="syntaxbox"></pre>' +
+      '<pre>folder/\n  file</pre>' +
+      '<pre>foobar;</pre>' +
+      '<pre>/* comment */\nvar code;</pre>' +
+      '<pre>@rule param {\n  descriptor: value;\n}</pre>' +
+      '<pre>&lt;tag&gt;</pre>' +
+      '<pre id="foo"></pre>' +
+      '<pre class="">foo</pre>' +
+      '<pre> \n\r foo</pre>' + 
+      '<div>Test on non pre</div>';
 
     const expected = [
-        {msg: '<pre>foobar;</pre>', type: WARNING},
-        {msg: '<pre>/* comment */\nvar code;</pre>', type: ERROR},
-        {msg: '<pre>@rule param {\n  descriptor: value;\n}</pre>', type: ERROR},
-        {msg: '<pre>&lt;tag&gt;</pre>', type: ERROR},
-        {msg: '<pre id="foo"></pre>', type: WARNING},
-        {msg: '<pre class="">foo</pre>', type: WARNING},
-        {msg: '<pre> \n\n foo</pre>', type: WARNING}
+      {msg: '<pre>foobar;</pre>', type: WARNING},
+      {msg: '<pre>/* comment */\nvar code;</pre>', type: ERROR},
+      {msg: '<pre>@rule param {\n  descriptor: value;\n}</pre>', type: ERROR},
+      {msg: '<pre>&lt;tag&gt;</pre>', type: ERROR},
+      {msg: '<pre id="foo"></pre>', type: WARNING},
+      {msg: '<pre class="">foo</pre>', type: WARNING},
+      {msg: '<pre> \n\n foo</pre>', type: WARNING}
     ];
 
 
