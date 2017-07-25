@@ -3,7 +3,7 @@ const ERROR = require('../lib/doctests.js').ERROR;
 const summaryHeading = require('../lib/summary-heading.js').summaryHeading;
 
 describe('summaryHeading', function() {
-  it('Should return 4 errors regarding Summary heading', function(done) {
+  it('Should return 1 errors regarding Summary heading', function(done) {
     const str = '<h2>Summary</h2>' +
       '<h2 id="Summary" name="Summary">Summary</h2>' +
 
