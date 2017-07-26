@@ -135,4 +135,33 @@ describe('languageStyle', function() {
 
     done();
   });
+
+  it('Should return 4 Errors regarding incorrect capitalization of shortcuts', function(done) {
+    const str = '<kbd>CTRL</kbd>+<kbd>A</kbd>' +
+      '<kbd>Ctrl</kbd>+<kbd>A</kbd>' +
+      '<kbd>SHIFT</kbd>+<kbd>A</kbd>' +
+      '<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd>' +
+      '<kbd>CMD</kbd>+<kbd>A</kbd>' + 
+      '<kbd>cmd</kbd>';
+
+    const expected = [
+      {msg: 'language_style_capitalized_shortcuts', msgParams: ["CTRL"], type: ERROR},
+      {msg: 'language_style_capitalized_shortcuts', msgParams: ["SHIFT"], type: ERROR},
+      {msg: 'language_style_capitalized_shortcuts', msgParams: ["CMD"], type: ERROR},
+      {msg: 'language_style_capitalized_shortcuts', msgParams: ["cmd"], type: ERROR},
+    ];
+
+
+    let rootElement = document.createElement("body");
+    rootElement.innerHTML = str;
+
+    let results = languageStyle.check(rootElement);
+
+    results.forEach((element, index) => {
+      delete element.node;
+      assert.deepEqual(expected[index], element);
+    });
+
+    done();
+  });
 });
