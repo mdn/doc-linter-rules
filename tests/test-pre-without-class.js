@@ -16,7 +16,8 @@ describe('preWithoutClass', function() {
       '<pre class="">foo</pre>' +
       '<pre> \n\r foo</pre>' + 
       '<div>Test on non pre</div>' +
-      '<pre class="eval">bar</pre>';
+      '<pre class="eval">bar</pre>' +
+      '<pre class="syntaxbox"><div>Test</div></pre>';
 
     const expected = [
       {msg: '<pre>foobar;</pre>', type: WARNING},
