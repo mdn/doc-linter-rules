@@ -4,7 +4,7 @@ const WARNING = require('../lib/doctests.js').WARNING;
 const preWithoutClass = require('../lib/pre-without-class.js').preWithoutClass;
 
 describe('preWithoutClass', function() {
-  it('Should return 3 errors and 4 warnings regarding pre lacking a class', function(done) {
+  it('Should return 4 errors and 4 warnings regarding pre lacking a class', function(done) {
     const str = '<pre class="brush: js"></pre>' +
       '<pre class="syntaxbox"></pre>' +
       '<pre>folder/\n  file</pre>' +
@@ -16,6 +16,7 @@ describe('preWithoutClass', function() {
       '<pre class="">foo</pre>' +
       '<pre> \n\r foo</pre>' + 
       '<div>Test on non pre</div>' +
+      '<pre class="eval">bar</pre>' +
       '<pre class="syntaxbox"><div>Test</div></pre>';
 
     const expected = [
@@ -25,7 +26,8 @@ describe('preWithoutClass', function() {
       {msg: '<pre>&lt;tag&gt;</pre>', type: ERROR},
       {msg: '<pre id="foo"></pre>', type: WARNING},
       {msg: '<pre class="">foo</pre>', type: WARNING},
-      {msg: '<pre> \n\n foo</pre>', type: WARNING}
+      {msg: '<pre> \n\n foo</pre>', type: WARNING},
+      {msg: '<pre class="eval">bar</pre>', type: ERROR}
     ];
 
 
